@@ -1,5 +1,7 @@
+//player input
 let player = prompt("pilih : gajah, semut, orang")
 
+//random computer
 let computer = Math.random()
 
 if(computer < 0.34){
@@ -10,4 +12,31 @@ if(computer < 0.34){
     computer = "orang"
 }
 
-console.log(computer)
+//rules
+let  hasil = ""
+
+if(player === computer){
+    hasil = `anda memilih ${player} dan komputer memilih ${computer} \nAnda Seri`
+}else if(player === "gajah"){
+    if(computer === "semut"){
+        hasil = "Kalah"
+    }else{
+        hasil = "Menang"
+    }
+}else if(player === "semut"){
+    if(computer === "gajah"){
+        hasil = "Menang"
+    }else{
+        hasil = "Kalah"
+    }
+}else if(player === "orang"){
+    if(computer === "gajah"){
+        hasil = "Kalah"
+    }else{
+        hasil = "Menang"
+    }
+}else{
+    hasil = "pilihan tidak ada"
+}
+
+alert(`anda memilih ${player} dan komputer memilih ${computer} \nAnda: ${hasil}`)
