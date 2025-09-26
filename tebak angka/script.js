@@ -8,11 +8,13 @@ while (ask) {
     while (change > 0 && !tebakanBenar) {
         player = prompt(`masukkan angka 1 - 10 \nAnda memiliki ${change} kesempatan`)
 
+        //jika user menclick cancel, maka akan keluar
         if(player === null || player.trim() === ""){
             alert("keluar")
             break
         }
 
+        //mendefinisikan angka 1 - 10
         let computer = Math.random()
 
         if (computer <= 0.1) {
@@ -37,6 +39,7 @@ while (ask) {
             computer = "10"
         }
 
+        //medefinisikan nilai dari hasil
         let hasil = ""
 
         if (computer === player) {
@@ -47,14 +50,14 @@ while (ask) {
             hasil = "salah"
         }
 
+        //pesan terlalu tinggi atau terlalu rendah
         if(computer > player){
             alert(`Anda memasukkan angka ${player}, terlalu rendah\nJawaban anda adalah: ${hasil}, Anda memiliki ${change} kesempatan`)
         }else{
             alert(`Anda memasukkan angka ${player}, terlalu tinggi\nJawaban anda adalah: ${hasil}, Anda memiliki ${change} kesempatan`)
         }
 
-        
-        
+        //jika kesempatan sudah habis
         if(!tebakanBenar && change === 0){
             alert("Yah, kesempatan anda sudah habis")
         }
