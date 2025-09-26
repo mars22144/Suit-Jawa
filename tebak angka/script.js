@@ -47,8 +47,13 @@ while (ask) {
             hasil = "salah"
         }
 
+        if(computer > player){
+            alert(`Anda memasukkan angka ${player}, terlalu rendah\nJawaban anda adalah: ${hasil}, Anda memiliki ${change} kesempatan`)
+        }else{
+            alert(`Anda memasukkan angka ${player}, terlalu tinggi\nJawaban anda adalah: ${hasil}, Anda memiliki ${change} kesempatan`)
+        }
+
         
-        alert(`Anda memasukkan angka ${player}\nJawaban anda adalah: ${hasil}, Anda memiliki ${change} kesempatan`)
         
         if(!tebakanBenar && change === 0){
             alert("Yah, kesempatan anda sudah habis")
